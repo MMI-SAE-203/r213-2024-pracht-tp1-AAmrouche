@@ -3,6 +3,7 @@ import { onErrorCaptured } from 'vue'
 import { RouterLink, RouterView } from 'vue-router/auto'
 import {ref} from 'vue'
 
+
 const menuIsOpen = ref(false)
 
 onErrorCaptured((err, instance, info) => {
@@ -16,7 +17,7 @@ onErrorCaptured((err, instance, info) => {
     <nav>
       <ul>
         <li>
-          <RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink>
+          
         </li>
       </ul>
     </nav>
@@ -38,9 +39,9 @@ onErrorCaptured((err, instance, info) => {
   <nav id="mainNav"
     v-show="menuIsOpen" >
     <ul >
-      <li ><a href="#">Item 1</a></li>
-      <li ><a href="#">Item 2</a></li>
-      <li ><a href="#">Item 3</a></li>
+      <li ><RouterLink to="/index" class="text-red-500 underline"> Accueil </RouterLink></li>
+      <li ><RouterLink to="/accordeon" class="text-red-500 underline"> Accordeon </RouterLink></li>
+      <li ><RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink></li>
     </ul>
   </nav>
 </Transition>
