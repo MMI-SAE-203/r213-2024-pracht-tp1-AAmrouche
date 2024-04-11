@@ -25,9 +25,9 @@ onErrorCaptured((err, instance, info) => {
     @pointerdown="menuIsOpen = !menuIsOpen"
     aria-controls="mainNav"
     aria-expanded="true"
-    class="rounded-full border-2 border-red-600 bg-red-300 px-2"
+    class="text-xL rounded-full border-2 #d97706 bg-red-300 px-2 text-3xl"
   >
-    menu
+    Menu
   </button>
 
   <Transition
@@ -38,10 +38,10 @@ onErrorCaptured((err, instance, info) => {
 ><!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
   <nav id="mainNav"
     v-show="menuIsOpen" >
-    <ul >
-      <li ><RouterLink to="/index" class="text-red-500 underline"> Accueil </RouterLink></li>
-      <li ><RouterLink to="/accordeon" class="text-red-500 underline"> Accordeon </RouterLink></li>
-      <li ><RouterLink to="/boucle" class="text-red-500 underline"> boucle</RouterLink></li>
+    <ul>
+      <li ><RouterLink to="/index" class="bg-purple-300 rounded-sm  "> Accueil </RouterLink></li>
+      <li ><RouterLink to="/accordeon" class=" bg-purple-300  rounded-sm "> Accordeon </RouterLink></li>
+      <li ><RouterLink to="/boucle" class="bg-purple-300 rounded-sm "> Boucle</RouterLink></li>
     </ul>
   </nav>
 </Transition>
