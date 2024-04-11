@@ -21,6 +21,7 @@ onErrorCaptured((err, instance, info) => {
       </ul>
     </nav>
     <button
+    @pointerdown="menuIsOpen = !menuIsOpen"
     aria-controls="mainNav"
     aria-expanded="true"
     class="rounded-full border-2 border-red-600 bg-red-300 px-2"
@@ -29,10 +30,10 @@ onErrorCaptured((err, instance, info) => {
   </button>
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
   <nav id="mainNav">
-    <ul v-show="menuIsOpen">
-      <li><a href="#">item 1</a></li>
-      <li><a href="#">item 2</a></li>
-      <li><a href="#">item 3</a></li>
+    <ul >
+      <li v-show="menuIsOpen"><a href="#">item 1</a></li>
+      <li v-show="menuIsOpen"><a href="#">item 2</a></li>
+      <li v-show="menuIsOpen"><a href="#">item 3</a></li>
     </ul>
   </nav>
   </header>
